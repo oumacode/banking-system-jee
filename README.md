@@ -1,6 +1,6 @@
 # 🏦 Bank Management System - EJB/JPA
 
-University project demonstrating Java EE technologies with EJB, JPA, and MySQL.
+A project demonstrating Java EE technologies with EJB, JPA, and MySQL.
 
 ## 📚 Technologies
 - **Java EE 8+** (Jakarta EE)
