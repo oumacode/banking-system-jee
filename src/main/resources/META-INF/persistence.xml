@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="BankPU">
-        <class>com.bank.entity.Account</class>
+        <class>com.example.bankmangement.entity.Account</class>
         <properties>
             <!-- Connexion JDBC -->
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>

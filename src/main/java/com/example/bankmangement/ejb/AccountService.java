@@ -8,7 +8,7 @@ import jakarta.persistence.PersistenceContext;
 import java.util.List;
 @Stateless
 @Local
-public class AccountService implements   {
+public class AccountService implements AccountServiceLocal,AccountServiceRemote {
 @PersistenceContext(unitName = "BankPU")
 private EntityManager em;
 public void createAccount(Account account) {

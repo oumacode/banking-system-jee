@@ -9,12 +9,12 @@ import java.util.Properties;
 public class Main {
     public static void main(String[] args) throws Exception {
         Properties props = new Properties();
-        props.put(Context.INITIAL_CONTEXT_FACTORY,
-                "org.wildfly.naming.client.WildFlyInitialContextFactory");
+
+        props.put(Context.INITIAL_CONTEXT_FACTORY, "org.wildfly.naming.client.WildFlyInitialContextFactory");
         props.put(Context.PROVIDER_URL, "http-remoting://localhost:8080");
+
         Context context = new InitialContext(props);
-        AccountService accountService = (AccountService)
-                context.lookup("java:module/AccountService");
+        AccountService accountService = (AccountService)context.lookup("java:module/AccountService");
 
         // Ajouter des comptes
         Account account1 = new Account();
