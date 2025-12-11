@@ -44,7 +44,7 @@ public class AccountService implements AccountServiceLocal, AccountServiceRemote
                 account.setBalance(account.getBalance() - amount);
                 em.merge(account);
             } else {
-                throw new Exception("Solde insuffisant.");
+                throw new Exception("Solde insuffisant");
             }
         }
     }
