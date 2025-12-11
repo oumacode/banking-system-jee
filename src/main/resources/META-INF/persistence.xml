@@ -1,17 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             version="3.0">
     <persistence-unit name="BankPU">
         <class>com.example.bankmangement.entity.Account</class>
         <properties>
-            <!-- Connexion JDBC -->
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/bank"/>
-            <property name="javax.persistence.jdbc.user" value="root"/>
-            <property name="javax.persistence.jdbc.password" value="password"/>
-            <!-- Hibernate JPA Implementation -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-            <property name="hibernate.show_sql" value="true"/>
+            <!-- Correct property names for Jakarta EE 10 -->
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/bank"/>
+            <property name="jakarta.persistence.jdbc.user"
+                      value="root"/>
+            <property name="jakarta.persistence.jdbc.password"
+                      value="password"/>
+
+            <!-- Correct schema generation property -->
+            <property name="jakarta.persistence.schema-generation.database.action"
+                      value="create"/>
+
+            <!-- Show SQL -->
+            <property name="jakarta.persistence.sql-dialect"
+                      value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="jakarta.persistence.jdbc.show_sql"
+                      value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
